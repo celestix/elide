@@ -59,6 +59,23 @@ type ResolveUsernameBody struct {
 	Username string `json:"username"`
 }
 
+type GetChatPhotoBody struct {
+	// User ID
+	ChatId any `json:"chat_id"`
+}
+
+type GetProfilePhotosBody struct {
+	// User ID
+	UserID any `json:"user_id"`
+	// Number of list elements to be skipped
+	Offset int `json:"offset,omitempty"`
+	// If a positive value was transferred, the method will return only photos with IDs less
+	// than the set one
+	MaxID int64 `json:"max_id,omitempty"`
+	// Number of list elements to be returned
+	Limit int `json:"limit,omitempty"`
+}
+
 // Message represents TL type `message#38116ee0`.
 // A message
 //

@@ -45,6 +45,20 @@ This method can be used to delete list of telegram messages in a chat.
 - `message_ids` (type []int64) (required): List of ids of messages to be fetched.
 - `revoke` (type bool) (optional): Pass `true` to revoke messages from a private chat.
 
+### > endpoint`/getProfilePhotos`
+This method can be used to get list of profile photos in the form of telegra.ph link.
+
+**Parameters**:
+- `user_id` (type int64|string): Unique identifier of the telegram user. 
+- `offset` (type int): If a positive value was transferred, the method will return only photos with IDs less than the set one.
+- `max_id` (type int64): Number of list elements to be returned
+- `limit` (type int): Number of list elements to be returned
+
+### > endpoint`/getChatPhoto`
+This method can be used to get photo set in a chat in the form of telegra.ph link.
+
+**Parameters**:
+- `chat_id` (type int64|string): Unique identifier of the telegram chat. 
 
 ## License
 Licensed under **GNU AFFERO GENERAL PUBLIC LICENSE V3**

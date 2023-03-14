@@ -91,4 +91,6 @@ func (e *Engine) loadHandlers() {
 	e.server.AddHandler("resolveUsername", methods.ResolveUsername)
 	e.server.AddHandler("deleteMessages", methods.DeleteMessages)
 	e.server.AddHandler("getMessages", methods.GetMessages)
+	e.server.AddHandler("getProfilePhotos", methods.GetProfilePhotos)
+	e.server.AddHandler("getChatPhoto", methods.GetChatPhoto)
 }

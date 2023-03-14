@@ -10,5 +10,6 @@ func runServer() {
 	defer log.Println("[Elide][MAIN]: Started")
 	config.Debug = true
 	engine := api.CreateEngine(protocol, port, appId, apiHash, botToken)
+	go runFlush()
 	engine.Run()
 }
